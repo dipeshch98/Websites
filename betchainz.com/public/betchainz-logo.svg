@@ -1,0 +1,11 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="8" fill="url(#gradient)"/>
+  <path d="M12 15L20 25L28 15M12 15L16 11M12 15L16 19M28 15L24 11M28 15L24 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="45" y="27" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#059669">betchainz</text>
+</svg>
