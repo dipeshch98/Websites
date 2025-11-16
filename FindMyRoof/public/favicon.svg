@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Complex gradient for depth -->
+    <radialGradient id="bgGradient" cx="30%" cy="30%">
+      <stop offset="0%" stopColor="#1e40af" />
+      <stop offset="50%" stopColor="#083660" />
+      <stop offset="100%" stopColor="#0a4d68" />
+    </radialGradient>
+    
+    <!-- Metallic gradient for roof -->
+    <linearGradient id="roofGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#ff6b6b" />
+      <stop offset="50%" stopColor="#ff8787" />
+      <stop offset="100%" stopColor="#ffa500" />
+    </linearGradient>
+    
+    <!-- Sky gradient -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#dbeafe" />
+      <stop offset="100%" stopColor="#93c5fd" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer ring for premium look -->
+  <circle cx="50" cy="50" r="49" fill="url(#bgGradient)" stroke="url(#roofGradient)" strokeWidth="1" opacity="0.95"/>
+  
+  <!-- Inner circle -->
+  <circle cx="50" cy="50" r="46" fill="url(#skyGradient)" stroke="#ffffff" strokeWidth="2"/>
+  
+  <!-- House elements with effects -->
+  <g filter="url(#shadow)">
+    <!-- Sun in sky -->
+    <circle cx="75" cy="25" r="4" fill="#fbbf24" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Clouds -->
+    <ellipse cx="25" cy="30" rx="6" ry="3" fill="#ffffff" opacity="0.7"/>
+    <ellipse cx="35" cy="28" rx="4" ry="2" fill="#ffffff" opacity="0.6"/>
+    
+    <!-- Modern house with gradients -->
+    <g>
+      <!-- Roof with metallic effect -->
+      <path d="M50 32L30 42L70 42L50 32Z" fill="url(#roofGradient)" stroke="#ffffff" strokeWidth="1"/>
+      
+      <!-- Chimney with smoke -->
+      <rect x="62" y="38" width="5" height="8" rx="2" fill="#ffffff" stroke="#083660" strokeWidth="0.5"/>
+      <ellipse cx="64.5" cy="36" rx="1.5" ry="2" fill="#9ca3af" opacity="0.6">
+        <animate attributeName="ry" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+      </ellipse>
+      
+      <!-- House body with depth -->
+      <rect x="30" y="60" width="40" height="28" rx="3" fill="#ffffff" stroke="#e5e7eb" strokeWidth="1"/>
+      
+      <!-- Modern door -->
+      <rect x="45" y="70" width="10" height="18" rx="2" fill="#083660"/>
+      <circle cx="52" cy="78" r="1" fill="#f9573b"/>
+      <rect x="51" y="75" width="2" height="6" rx="1" fill="#f9573b"/>
+      
+      <!-- Windows with light effect -->
+      <rect x="36" y="65" width="6" height="6" rx="1" fill="#083660" stroke="#ffffff" strokeWidth="0.5"/>
+      <rect x="58" y="65" width="6" height="6" rx="1" fill="#083660" stroke="#ffffff" strokeWidth="0.5"/>
+      
+      <!-- Window lights -->
+      <rect x="38" y="67" width="2" height="2" rx="1" fill="#fbbf24" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="60" y="67" width="2" height="2" rx="1" fill="#fbbf24" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      
+      <!-- Modern windows -->
+      <rect x="35" y="72" width="2" height="2" rx="1" fill="#083660"/>
+      <rect x="63" y="72" width="2" height="2" rx="1" fill="#083660"/>
+      
+      <!-- Garden path -->
+      <rect x="28" y="88" width="44" height="2" rx="1" fill="#10b981"/>
+      <!-- Grass patches -->
+      <circle cx="32" cy="92" r="1" fill="#22c55e"/>
+      <circle cx="40" cy="91" r="0.8" fill="#16a34a"/>
+      <circle cx="50" cy="92" r="1" fill="#22c55e"/>
+      <circle cx="60" cy="91" r="0.7" fill="#16a34a"/>
+      <circle cx="68" cy="92" r="0.9" fill="#22c55e"/>
+    </g>
+  </g>
+</svg>
